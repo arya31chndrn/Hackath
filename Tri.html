@@ -3,147 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the legend of Kerala, God's Own Country. Explore adventure tours and breathtaking sights.">
-    <title>Explore Kerala</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <title>Tourist Places</title>
     <style>
-        /* Reset Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
-            color: #ffffff;
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
             background-color: #f9f9f9;
+            color: #333;
         }
 
-        /* NAVBAR */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: rgb(254, 254, 254);
-            z-index: 1000;
-        }
-
-        .navbar .logo {
-            font-size: large;
-            font-weight: bold;
-            color: #093917;
-            text-shadow: 2px 2px 2px rgba(126, 125, 125, 0.7);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links li {
-            margin: 0 15px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #33512f;
-            font-size: 1rem;
-            font-weight: 500;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-
-        .nav-links .ctn a {
-            padding: 8px 20px;
-            background: linear-gradient(45deg, #ffd700, #ff6a00);
-            border-radius: 30px;
-            color: #fff;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .nav-links .ctn a:hover {
-            background: linear-gradient(45deg, #ff6a00, #ffd700);
-            transform: scale(1.1);
-        }
-
-        /* HEADER */
         header {
-            width: 100vw;
-            height: 100vh;
-            background-image: url('Waall.jpg');
-            background-position: center;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
-
-        .header_content {
-            color: #fff;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
             text-align: center;
-            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .header_content h2 {
-            font-size: 2rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Roboto Slab', serif;
         }
 
-        .header_content h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
 
-        .line {
-            width: 120px;
-            height: 4px;
-            background: #ffd700;
-            margin: 10px auto;
-            border-radius: 5px;
-        }
-
-        .header_content h3 {
-            font-size: 1.5rem;
-            margin-top: 15px;
-            font-weight: 400;
-        }
-
-        /* Slideshow Styling */
         .slideshow {
             position: relative;
             width: 100%;
             overflow: hidden;
-            margin-top: 50px;
         }
 
         .slideshow .slides {
@@ -205,142 +98,81 @@
             border-radius: 5px;
         }
 
-        /* DESTINATIONS SECTION */
-        .destinations {
-            padding: 50px 40px;
-            background: #fff;
-            text-align: center;
-        }
-
-        .destinations h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 30px;
-        }
-
-        .destination-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .destination {
-            background: #f1f1f1;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .destination h3 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .destination p {
-            font-size: 1rem;
-            color: #666;
-        }
-
-        .destination:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* CALL TO ACTION */
-        .cta {
-            padding: 50px 40px;
-            background: linear-gradient(45deg, #006400, #228b22);
-            color: #fff;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .cta .btn {
-            padding: 12px 30px;
-            font-size: 1rem;
-            color: #fff;
-            background: #ffd700;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .cta .btn:hover {
-            background: #ff6a00;
-            transform: scale(1.1);
-        }
-
-        /* FOOTER */
         footer {
-            padding: 20px;
+            background-color: #333;
+            color: white;
             text-align: center;
-            background: #222;
-            color: #fff;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
             font-size: 0.9rem;
         }
-
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <h1 class="logo">ETHEREAL ESCAPES</h1>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Tours</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">About</a></li>
-            <li class="ctn"><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
     <header>
-        <div class="header_content">
-            <h2>Discover the legend of Kerala</h2>
-            <h1>GOD'S OWN COUNTRY</h1>
-            <div class="line"></div>
-            <h3>From serene backwaters to lush tea gardens</h3>
-        </div>
+        <h1>Trivandrum</h1>
     </header>
 
     <div class="container">
-        <!-- Trivandrum Heading -->
-        <h1 style="text-align: center; color: #4CAF50; margin-top: 40px;">Trivandrum</h1>
-
         <div class="slideshow">
             <div class="slides">
                 <div class="card">
-                    <img src="https://i.pinimg.com/736x/2c/12/9b/2c129b68121c8e29a58c61e7710871f7.jpg" alt="Kovalam">
+                    <img src="img/2c129b68121c8e29a58c61e7710871f7.jpg" alt="Kovalam">
                     <div class="card-content">
                         <h3>Kovalam</h3>
                         <p>A popular beach destination with scenic views, clear waters, and great opportunities for swimming and surfing.</p>
                     </div>
                 </div>
+
                 <div class="card">
-                    <img src="https://i.pinimg.com/236x/17/57/94/175794de1d8e6ccff98f10fc594aa73a.jpg" alt="Padmanabhaswamy Temple">
+                    <img src="img/5c.jpg" alt="Padmanabhaswamy Temple">
                     <div class="card-content">
                         <h3>Padmanabhaswamy Temple</h3>
                         <p>An ancient Hindu temple famous for its rich history, stunning architecture, and being one of the wealthiest temples in the world.</p>
                     </div>
                 </div>
+
+                
+
                 <div class="card">
-                    <img src="https://i.pinimg.com/236x/cc/c4/01/ccc40143efd04b2ec1842a767c560e39.jpg" alt="Agasthyakoodam">
+                    <img src="https://i.pinimg.com/736x/80/9a/6f/809a6f1ca2730b418199da22a9b4506e.jpg" alt="Kilimanoor Palace">
+                    <div class="card-content">
+                        <h3>Kilimanoor Palace</h3>
+                        <p>A historical palace known for its traditional Kerala architecture and being the birthplace of artist Raja Ravi Varma.</p>
+                    </div>
+                </div>
+
+                <!-- New Card 1 -->
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/b7/da/2a/b7da2afbb242526f617f74d0e1e55cdb.jpg" alt="Vizhinjam Port Harbour">
+                    <div class="card-content">
+                        <h3>Vizhinjam Port Harbour</h3>
+                        <p>A natural harbor near Trivandrum, known for its picturesque views and the upcoming deep-water port project.</p>
+                    </div>
+                </div>
+
+                <!-- New Card 2 -->
+                <div class="card">
+                    <img src="img/kanyakumari.jpg" alt="Kanyakumari">
+                    <div class="card-content">
+                        <h3>Kanyakumari</h3>
+                        <p>A coastal town at India's southern tip, famous for its breathtaking sunrise, sunset, and the Vivekananda Rock Memorial.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://tramptraveller.com/wp-content/uploads/2020/02/12018031212075752509.jpg" alt="Agasthyakoodam">
                     <div class="card-content">
                         <h3>Agasthyakoodam</h3>
                         <p>Kerala's second-highest peak, ideal for trekking, with lush forests and rich biodiversity.</p>
                     </div>
                 </div>
+                
             </div>
             <div class="navigation">
                 <button id="prev">&#10094;</button>
@@ -349,33 +181,6 @@
         </div>
     </div>
 
-    <section class="destinations">
-        <h2>Top Destinations</h2>
-        <div class="destination-list">
-            <div class="destination">
-                <h3>Kovalam Beach</h3>
-                <p>Relax by the beach, enjoy the sunset, and take a dip in the Arabian Sea.</p>
-            </div>
-            <div class="destination">
-                <h3>Varkala Cliff</h3>
-                <p>Known for its stunning cliffs and a serene beach, perfect for relaxation and yoga.</p>
-            </div>
-            <div class="destination">
-                <h3>Alleppey Backwaters</h3>
-                <p>Explore the tranquil backwaters in a traditional houseboat.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <h2>Ready for your next adventure?</h2>
-        <p>Contact us now for exclusive offers and packages!</p>
-        <button class="btn">Book Now</button>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Kerala Explorer. All rights reserved.</p>
-    </footer>
 
     <script>
         const slides = document.querySelector('.slides');
@@ -396,12 +201,8 @@
             currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
             updateSlidePosition();
         });
-
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % slides.children.length;
-            updateSlidePosition();
-        }, 5000);
     </script>
 </body>
 </html>
+
 
