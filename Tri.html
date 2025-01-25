@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .slideshow {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slideshow .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slideshow .card {
+            min-width: 300px;
+            margin-right: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .slideshow .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .slideshow .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+
+        .card-content p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Trivandrum</h1>
+    </header>
+
+    <div class="container">
+        <div class="slideshow">
+            <div class="slides">
+                <div class="card">
+                    <img src="img/2c129b68121c8e29a58c61e7710871f7.jpg" alt="Kovalam">
+                    <div class="card-content">
+                        <h3>Kovalam</h3>
+                        <p>A popular beach destination with scenic views, clear waters, and great opportunities for swimming and surfing.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/5c.jpg" alt="Padmanabhaswamy Temple">
+                    <div class="card-content">
+                        <h3>Padmanabhaswamy Temple</h3>
+                        <p>An ancient Hindu temple famous for its rich history, stunning architecture, and being one of the wealthiest temples in the world.</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/80/9a/6f/809a6f1ca2730b418199da22a9b4506e.jpg" alt="Kilimanoor Palace">
+                    <div class="card-content">
+                        <h3>Kilimanoor Palace</h3>
+                        <p>A historical palace known for its traditional Kerala architecture and being the birthplace of artist Raja Ravi Varma.</p>
+                    </div>
+                </div>
+
+                <!-- New Card 1 -->
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/b7/da/2a/b7da2afbb242526f617f74d0e1e55cdb.jpg" alt="Vizhinjam Port Harbour">
+                    <div class="card-content">
+                        <h3>Vizhinjam Port Harbour</h3>
+                        <p>A natural harbor near Trivandrum, known for its picturesque views and the upcoming deep-water port project.</p>
+                    </div>
+                </div>
+
+                <!-- New Card 2 -->
+                <div class="card">
+                    <img src="img/kanyakumari.jpg" alt="Kanyakumari">
+                    <div class="card-content">
+                        <h3>Kanyakumari</h3>
+                        <p>A coastal town at India's southern tip, famous for its breathtaking sunrise, sunset, and the Vivekananda Rock Memorial.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://tramptraveller.com/wp-content/uploads/2020/02/12018031212075752509.jpg" alt="Agasthyakoodam">
+                    <div class="card-content">
+                        <h3>Agasthyakoodam</h3>
+                        <p>Kerala's second-highest peak, ideal for trekking, with lush forests and rich biodiversity.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="navigation">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${currentIndex * 300}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+            updateSlidePosition();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
+            updateSlidePosition();
+        });
+    </script>
+</body>
+</html>
+
+

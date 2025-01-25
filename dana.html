@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .slideshow {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slideshow .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slideshow .card {
+            min-width: 300px;
+            margin-right: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .slideshow .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .slideshow .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+
+        .card-content p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Alappuzha</h1>
+    </header>
+
+    <div class="container">
+        <div class="slideshow">
+            <div class="slides">
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 12.01.19_67ad9f69.jpg" alt="Kuttanad">
+                    <div class="card-content">
+                        <h3>Kuttanad</h3>
+                        <p>A beautiful destination with breathtaking views and amazing experiences.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 12.01.19_615a0dab.jpg" alt="St George Forane church">
+                    <div class="card-content">
+                        <h3>St George Forane Church </h3>
+                        <p>Known for its rich history and stunning architecture.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 12.01.16_d95c062d.jpg" alt="Vembanad kayal">
+                    <div class="card-content">
+                        <h3>Vembanad kayal</h3>
+                        <p>A perfect spot for nature lovers and adventure enthusiasts.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 12.01.18_9ee9eda1.jpg" alt="Ambalapuzha">
+                    <div class="card-content">
+                        <h3>Ambalapuzha</h3>
+                        <p>Famous for its vibrant culture and delicious local cuisine.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1>Wayanad</h1>
+    </header>
+
+    <div class="container">
+        <div class="slideshow">
+            <div class="slides">
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 14.24.29_bedcbcd1.jpg" alt="Soojipara Waterfalls">
+                    <div class="card-content">
+                        <h3>Soojipara Waterfalls</h3>
+                        <p>A beautiful destination with breathtaking views and amazing experiences.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 14.24.30_5c7633d8.jpg" alt="Edakkal Caves">
+                    <div class="card-content">
+                        <h3>Edakkal Caves </h3>
+                        <p>Known for its rich history and stunning artworks.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 14.24.26_b005773e.jpg" alt="Banasura Sagar Dam">
+                    <div class="card-content">
+                        <h3>Banasura Sagar Dam</h3>
+                        <p>A perfect spot for nature lovers and adventure enthusiasts.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 14.24.25_e126528c.jpg" alt="Chembra ">
+                    <div class="card-content">
+                        <h3>Chembra</h3>
+                        <p>Famous for its natural serenity and amazing treking experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1>Kottayam</h1>
+    </header>
+
+    <div class="container">
+        <div class="slideshow">
+            <div class="slides">
+                <div class="card">
+                    <img src="IMG-20250125-WA0031.jpg" alt="Illikalkallu">
+                    <div class="card-content">
+                        <h3>Illikalkallu</h3>
+                        <p>A beautiful destination with breathtaking views and amazing experiences.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="IMG-20250125-WA0031 (2).jpg" alt="Ilaveezhapoonchira">
+                    <div class="card-content">
+                        <h3>Ilaveezhapoonchira </h3>
+                        <p>Known for its rich history and stunning artworks.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="IMG-20250125-WA0031 (3).jpg" alt="Aruvikuzhi Waterfalls">
+                    <div class="card-content">
+                        <h3>Aruvikuzhi Waterfalls</h3>
+                        <p>A perfect spot for nature lovers and adventure enthusiasts.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="IMG-20250125-WA0031 (4).jpg" alt="Kattikayam Waterfalls ">
+                    <div class="card-content">
+                        <h3>Kattikayam Waterfalls</h3>
+                        <p>Famous for its natural serenity and amazing treking experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1>Kasargode</h1>
+    </header>
+
+    <div class="container">
+        <div class="slideshow">
+            <div class="slides">
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 15.46.12_df083330.jpg" alt="Bekal Fort">
+                    <div class="card-content">
+                        <h3>Bekal Fort</h3>
+                        <p>A beautiful destination with breathtaking views and amazing experiences.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 15.46.12_cc4c409f.jpg" alt="Ananthapura Lake Temple">
+                    <div class="card-content">
+                        <h3>Ananthapura Lake Temple </h3>
+                        <p>Known for its rich history and stunning artworks.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 15.46.12_7a733f9e.jpg" alt="Kottancheri Hills">
+                    <div class="card-content">
+                        <h3>Kottancheri Hills</h3>
+                        <p>A perfect spot for nature lovers and adventure enthusiasts.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="WhatsApp Image 2025-01-25 at 15.46.13_e65802f1.jpg" alt="Chembirika Beach">
+                    <div class="card-content">
+                        <h3>Chembirika Beach</h3>
+                        <p>Famous for its natural serenity and amazing treking experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            slides.style.transform = translateX(-${currentIndex * 300}px);
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+            updateSlidePosition();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
+            updateSlidePosition();
+        });
+    </script>
+</body>
+</html>

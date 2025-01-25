@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the legend of Kerala, God's Own Country. Explore adventure tours and breathtaking sights.">
-    <title>Explore_kerala</title>
-<<<<<<< HEAD
+    <title>Tourist Places</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -114,44 +112,14 @@
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
-
-
-  
-=======
->>>>>>> 47d544fdca70f8e1edf8fdeb0d01037a7a15ea05
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <nav class="navbar">
-        <h1 class="logo">ETHEREAL ESCAPES</h1>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Tours</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">About</a></li>
-            <li class="ctn"><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-   
-    <header>
-        <div class="header_content">
-            <h2>Discover the legend of Kerala</h2>
-            <h1>GOD'S OWN COUNTRY</h1>
-            <div class="line"></div>
-            <h3>From serene backwaters to lush tea gardens</h3>
-        </div>
-    </header>
-<<<<<<< HEAD
     <header>
         <h1>Trivandrum</h1>
     </header>
 
     <div class="container">
-        <div class="slideshow">
+        <div class="slideshow" id="slideshow-trivandrum">
             <div class="slides">
                 <div class="card">
                     <img src="img/2c129b68121c8e29a58c61e7710871f7.jpg" alt="Kovalam">
@@ -169,8 +137,6 @@
                     </div>
                 </div>
 
-                
-
                 <div class="card">
                     <img src="https://i.pinimg.com/736x/80/9a/6f/809a6f1ca2730b418199da22a9b4506e.jpg" alt="Kilimanoor Palace">
                     <div class="card-content">
@@ -179,7 +145,6 @@
                     </div>
                 </div>
 
-                <!-- New Card 1 -->
                 <div class="card">
                     <img src="https://i.pinimg.com/736x/b7/da/2a/b7da2afbb242526f617f74d0e1e55cdb.jpg" alt="Vizhinjam Port Harbour">
                     <div class="card-content">
@@ -188,7 +153,6 @@
                     </div>
                 </div>
 
-                <!-- New Card 2 -->
                 <div class="card">
                     <img src="img/kanyakumari.jpg" alt="Kanyakumari">
                     <div class="card-content">
@@ -196,28 +160,20 @@
                         <p>A coastal town at India's southern tip, famous for its breathtaking sunrise, sunset, and the Vivekananda Rock Memorial.</p>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="https://tramptraveller.com/wp-content/uploads/2020/02/12018031212075752509.jpg" alt="Agasthyakoodam">
-                    <div class="card-content">
-                        <h3>Agasthyakoodam</h3>
-                        <p>Kerala's second-highest peak, ideal for trekking, with lush forests and rich biodiversity.</p>
-                    </div>
-                </div>
-                
             </div>
             <div class="navigation">
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
+                <button class="prev" data-target="slideshow-trivandrum">&#10094;</button>
+                <button class="next" data-target="slideshow-trivandrum">&#10095;</button>
             </div>
         </div>
     </div>
+
     <header>
         <h1>Ernakulam</h1>
     </header>
 
     <div class="container">
-        <div class="slideshow">
+        <div class="slideshow" id="slideshow-ernakulam">
             <div class="slides">
                 <div class="card">
                     <img src="img/1e02f2c7426487a4924124ae45cd5782.jpg" alt="Hill Palace Museum">
@@ -250,94 +206,133 @@
                         <p>Experience the diversity of bird species in one of Kerala's finest sanctuaries.</p>
                     </div>
                 </div>
-
-                <!-- Additional Cards -->
-                <div class="card">
-                    <img src="https://i.pinimg.com/736x/1a/ce/ae/1aceae88ee28d29e55730714a96c0e0d.jpg" alt="Fort Kochi Beach">
-                    <div class="card-content">
-                        <h3>Fort Kochi Beach</h3>
-                        <p>Unwind by the beach with scenic views and historical landmarks.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://i.pinimg.com/736x/35/79/2e/35792e59f66e388461057e0be29fba54.jpg" alt="Wonderla Amusement Park">
-                    <div class="card-content">
-                        <h3>Wonderla Amusement Park</h3>
-                        <p>Have fun with thrilling rides and water attractions for the whole family.</p>
-                    </div>
-                </div>
-
             </div>
             <div class="navigation">
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
+                <button class="prev" data-target="slideshow-ernakulam">&#10094;</button>
+                <button class="next" data-target="slideshow-ernakulam">&#10095;</button>
             </div>
         </div>
     </div>
+
     <header>
-    
+        <h1>Thrissur</h1>
+    </header>
 
+    <div class="container">
+        <div class="slideshow" id="slideshow-thrissur">
+            <div class="slides">
+                <div class="card">
+                    <img src="img/thrissur_pooram.jpg" alt="Thrissur Pooram">
+                    <div class="card-content">
+                        <h3>Thrissur Pooram</h3>
+                        <p>Known as the "festival of festivals," Thrissur Pooram is a grand cultural event featuring colorful processions and traditional music.</p>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <img src="img/athirapally_falls.jpg" alt="Athirapally Falls">
+                    <div class="card-content">
+                        <h3>Athirapally Falls</h3>
+                        <p>Dubbed the "Niagara of India," this stunning waterfall is a must-visit attraction in Thrissur.</p>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <img src="img/vadakkumnathan_temple.jpg" alt="Vadakkumnathan Temple">
+                    <div class="card-content">
+                        <h3>Vadakkumnathan Temple</h3>
+                        <p>An ancient temple dedicated to Lord Shiva, known for its classic Kerala-style architecture.</p>
+                    </div>
+                </div>
 
-
-
-
-
-    
-
-
-     <!-- About Section -->
-     <section class="about">
-        <div class="content">
-            <h2>Discover the Wonders of Kerala</h2>
-            <p>
-                Nestled in the southwestern corner of India, Kerala offers a blend of serene landscapes, vibrant traditions, and mouthwatering cuisine. 
-                Immerse yourself in the tranquility of Alleppey's backwaters, stroll through Munnar's picturesque tea plantations, or experience the energy of Kerala's cultural festivals.
-            </p>
-        </div>
-
-    </section>
-
-    <!-- Featured Destinations -->
-    <section class="destinations">
-        <h2>Top Destinations</h2>
-        <div class="destination-list">
-            <div class="destination">
-                <h3>Alleppey Backwaters</h3>
-                <p>Experience the soothing charm of houseboats and tranquil canals.</p>
+                <div class="card">
+                    <img src="img/chettuva_backwaters.jpg" alt="Chettuva Backwaters">
+                    <div class="card-content">
+                        <h3>Chettuva Backwaters</h3>
+                        <p>Experience the serene beauty of backwaters with lush green surroundings and houseboat cruises.</p>
+                    </div>
+                </div>
             </div>
-            <div class="destination">
-                <h3>Munnar</h3>
-                <p>Explore rolling hills and sprawling tea gardens in this hill station paradise.</p>
-            </div>
-            <div class="destination">
-                <h3>Kochi</h3>
-                <p>Witness the perfect blend of history, culture, and modernity.</p>
-            </div>
-            <div class="destination">
-                <h3>Wayanad</h3>
-                <p>Dive into adventure with trekking, waterfalls, and wildlife.</p>
+            <div class="navigation">
+                <button class="prev" data-target="slideshow-thrissur">&#10094;</button>
+                <button class="next" data-target="slideshow-thrissur">&#10095;</button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Ready to Plan Your Trip?</h2>
-        <p>Let us guide you through the heart of Kerala. Book your journey today!</p>
-        <button class="btn">Get Started</button>
-    </section>
-<<<<<<< HEAD
+    <header>
+        <h1>Pathanamthitta</h1>
+    </header>
+
+    <div class="container">
+        <div class="slideshow" id="slideshow-pathanamthitta">
+            <div class="slides">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/1a/8d/07/1a8d07f0a03a5b62a56af48a0eaf6dd9.jpg" alt="Gavi">
+                    <div class="card-content">
+                        <h3>Gavi</h3>
+                        <p>Scenic eco-tourism spot amidst forests and wildlife.</p>
+                    </div>
+                </div>
 
 
-    
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/9c/27/47/9c2747f8386943e89045f26fd04a8a62.jpg" alt="Perunthenaruvi Waterfalls">
+                    <div class="card-content">
+                        <h3>Perunthenaruvi Waterfalls</h3>
+                        <p>A stunning waterfall set in a lush landscape.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPSlyRSf8YgYfhN3gXKgav68a0Ett3w1FUifokN=s1360-w1360-h1020-rw" alt="Konni Reserve Forest">
+                    <div class="card-content">
+                        <h3>Konni Reserve Forest</h3>
+                        <p>A rich wildlife reserve with elephant training camps.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/f1/77/0b/f1770b9bd9d71d9f3bf2a048a2d3c07e.jpg" alt="Aranmula Temple">
+                    <div class="card-content">
+                        <h3>Aranmula Temple</h3>
+                        <p>A historic temple known for its cultural significance.</p>
+                    </div>
+                </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Kerala Escapes. All rights reserved. | Designed for Travelers</p>
-    </footer>
+                
+                
+
+
+               
+            </div>
+            <div class="navigation">
+                <button class="prev" data-target="slideshow-pathanamthitta">&#10094;</button>
+                <button class="next" data-target="slideshow-pathanamthitta">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.slideshow').forEach(slideshow => {
+            const slides = slideshow.querySelector('.slides');
+            const prevButton = slideshow.querySelector('.prev');
+            const nextButton = slideshow.querySelector('.next');
+
+            let currentIndex = 0;
+
+            function updateSlidePosition() {
+                slides.style.transform = `translateX(-${currentIndex * 300}px)`;
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+                updateSlidePosition();
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
+                updateSlidePosition();
+            });
+        });
+    </script>
 </body>
 </html>
-

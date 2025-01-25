@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .slideshow {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slideshow .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slideshow .card {
+            min-width: 300px;
+            margin-right: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .slideshow .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .slideshow .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+
+        .card-content p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Kannur</h1>
+    </header>
+
+    <div class="container">
+        <div class="slideshow">
+            <div class="slides">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/34/50/9c/34509ceb8ff1c30f479604c35ac31640.jpg" alt="Payyambalam Beach">
+                    <div class="card-content">
+                        <h3>Payyambalam Beach</h3>
+                        <p>Explore the royal heritage of Kerala in this historic palace-turned-museum.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/unnamed (2)hh.webp" alt="Mattancherry Palace">
+                    <div class="card-content">
+                        <h3>Mattancherry Palace</h3>
+                        <p>A beautiful blend of Kerala and Portuguese architecture showcasing history.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/aa/ef/e9/aaefe901efe68304a7c5e8085a79823e.jpg" alt="Kerala Folklore Museum">
+                    <div class="card-content">
+                        <h3>Kerala Folklore Museum</h3>
+                        <p>Immerse yourself in Kerala's rich cultural history and folk traditions.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/14/7e/c6/147ec6d153a565402ec6d9266732457e.jpg" alt="Thattekad Bird Sanctuary">
+                    <div class="card-content">
+                        <h3>Thattekad Bird Sanctuary</h3>
+                        <p>Experience the diversity of bird species in one of Kerala's finest sanctuaries.</p>
+                    </div>
+                </div>
+
+                <!-- Additional Cards -->
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/1a/ce/ae/1aceae88ee28d29e55730714a96c0e0d.jpg" alt="Fort Kochi Beach">
+                    <div class="card-content">
+                        <h3>Fort Kochi Beach</h3>
+                        <p>Unwind by the beach with scenic views and historical landmarks.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/35/79/2e/35792e59f66e388461057e0be29fba54.jpg" alt="Wonderla Amusement Park">
+                    <div class="card-content">
+                        <h3>Wonderla Amusement Park</h3>
+                        <p>Have fun with thrilling rides and water attractions for the whole family.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="navigation">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${currentIndex * 300}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+            updateSlidePosition();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
+            updateSlidePosition();
+        });
+    </script>
+</body>
+</html>

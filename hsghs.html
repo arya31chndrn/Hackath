@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the legend of Kerala, God's Own Country. Explore adventure tours and breathtaking sights.">
+    <title>Explore Kerala</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgb(254, 254, 254);
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: large;
+            font-weight: bold;
+            color: #093917;
+            text-shadow: 2px 2px 2px rgba(126, 125, 125, 0.7);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #33512f;
+            font-size: 1rem;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .nav-links .ctn a {
+            padding: 8px 20px;
+            background: linear-gradient(45deg, #ffd700, #ff6a00);
+            border-radius: 30px;
+            color: #fff;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .nav-links .ctn a:hover {
+            background: linear-gradient(45deg, #ff6a00, #ffd700);
+            transform: scale(1.1);
+        }
+
+        /* HEADER */
+        header {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Waall.jpg');
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .header_content {
+            color: #fff;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .header_content h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .header_content h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .line {
+            width: 120px;
+            height: 4px;
+            background: #ffd700;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .header_content h3 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        /* DESTINATIONS SECTION */
+        .destinations {
+            padding: 50px 40px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .destinations h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .destination-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .destination {
+            background: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .destination h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .destination p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .destination:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CALL TO ACTION */
+        .cta {
+            padding: 50px 40px;
+            background: linear-gradient(45deg, #006400, #228b22);
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta .btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            color: #fff;
+            background: #ffd700;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta .btn:hover {
+            background: #ff6a00;
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #222;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        /* Slideshow Styling */
+        .slideshow {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slideshow .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slideshow .card {
+            min-width: 300px;
+            margin-right: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .slideshow .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .slideshow .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+
+        .card-content p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">ETHEREAL ESCAPES</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tours</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">About</a></li>
+            <li class="ctn"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header_content">
+            <h2>Discover the legend of Kerala</h2>
+            <h1>GOD'S OWN COUNTRY</h1>
+            <div class="line"></div>
+            <h3>From serene backwaters to lush tea gardens</h3>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="content">
+            <h2>Discover the Wonders of Kerala</h2>
+            <p>
+                Nestled in the southwestern corner of India, Kerala offers a blend of serene landscapes, vibrant traditions, and mouthwatering cuisine. 
+                Immerse yourself in the tranquility of Alleppey's backwaters, stroll through Munnar's picturesque tea plantations, or experience the energy of Kerala's cultural festivals.
+            </p>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <h2>Top Destinations</h2>
+        <div class="destination-list">
+            <div class="destination">
+                <h3>Alleppey Backwaters</h3>
+                <p>Experience the soothing charm of houseboats and tranquil canals.</p>
+            </div>
+            <div class="destination">
+                <h3>Munnar</h3>
+                <p>Explore rolling hills and sprawling tea gardens in this hill station paradise.</p>
+            </div>
+            <div class="destination">
+                <h3>Kochi</h3>
+                <p>Witness the perfect blend of history, culture, and modernity.</p>
+            </div>
+            <div class="destination">
+                <h3>Wayanad</h3>
+                <p>Dive into adventure with trekking, waterfalls, and wildlife.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Plan Your Trip?</h2>
+        <p>Let us guide you through the heart of Kerala. Book your journey today!</p>
+        <button class="btn">Get Started</button>
+    </section>
+
+    <div class="container">
+        <div class="slideshow">
+            <div class="slides">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/2c/12/9b/2c129b68121c8e29a58c61e7710871f7.jpg" alt="Kovalam">
+                    <div class="card-content">
+                        <h3>Kovalam</h3>
+                        <p>A popular beach destination with scenic views, clear waters, and great opportunities for swimming and surfing.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/236x/17/57/94/175794de1d8e6ccff98f10fc594aa73a.jpg" alt="Padmanabhaswamy Temple">
+                    <div class="card-content">
+                        <h3>Padmanabhaswamy Temple</h3>
+                        <p>An ancient Hindu temple famous for its rich history, stunning architecture, and being one of the wealthiest temples in the world.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/236x/cc/c4/01/ccc40143efd04b2ec1842a767c560e39.jpg" alt="Agasthyakoodam">
+                    <div class="card-content">
+                        <h3>Agasthyakoodam</h3>
+                        <p>Kerala's second-highest peak, ideal for trekking, with lush forests and rich biodiversity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kerala Explorer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${currentIndex * 300}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+            updateSlidePosition();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
+            updateSlidePosition();
+        });
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.children.length;
+            updateSlidePosition();
+        }, 5000);
+    </script>
+</body>
+</html>
