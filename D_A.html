@@ -139,7 +139,7 @@
     </section>
 
     <div class="container">
-        <div class="slideshow" id="slideshow-tri">
+        <div class="slideshow" >
             <div class="slides">
                 <div class="card">
                     <img src="WhatsApp Image 2025-01-25 at 22.30.11_8e1556db.jpg" alt="Kovalam">
@@ -204,8 +204,7 @@
         <h1>Ernakulam</h1>
     </section>
     <div class="container">
-        <div class="slideshow" id="slideshow-kochi">
-    
+        <div class="slideshow" >
             <div class="slides">
                 <div class="card">
                     <img src="WhatsApp Image 2025-01-25 at 22.22.20_a3052091.jpg" alt="Hill Palace Museum">
@@ -258,8 +257,8 @@
 
             </div>
             <div class="navigation">
-                <button class="prev" id="prev-kochi">&#10094;</button>
-                <button class="next" id="next-kochi">&#10095;</button>
+                <button id="prev" >&#10094;</button>
+                <button id="next">&#10095;</button>
             </div>
         </div>
     </div>
@@ -356,7 +355,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="img/unnamed.webp" alt="Thiruvambady SreeKrishna Temple">
+                    <img src="https://i.pinimg.com/736x/b6/58/65/b65865f1245786a4c9d8a649cf678768.jpg" alt="Thiruvambady SreeKrishna Temple">
                     <div class="card-content">
                         <h3>Thiruvambady SreeKrishna Temple</h3>
                         <p>A historic temple with rich cultural heritage.</p>
@@ -567,7 +566,29 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0
+
+        function updateSlideposition(){
+            slides.style.transform = `translateX(-${currentIndex * 300}px)`;
+        }
+        prevButton.addEventlistner(`click` , () => {
+            currentIndex = (currentIndex >0)? currentIndex-1 :0;
+            updateSlideposition();
+        });
+        nextButton.addEventListener(`click`, () => {
+            currentIndex = (currentIndex < slides.children.length -1) ? currentIndex + 1 :currentIndex;
+            updateSlideposition();
+
+
+        });
+
+
+    </script>
+
 
 
 
