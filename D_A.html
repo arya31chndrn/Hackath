@@ -567,40 +567,10 @@
             </div>
         </div>
     </div>
-
-
-
-
     
 
 
 
-
-
-
-    <script>
-        document.querySelectorAll('.slideshow').forEach(function(slideshow) {
-            const slides = slideshow.querySelector('.slides');
-            const prevButton = slideshow.querySelector('.prev');
-            const nextButton = slideshow.querySelector('.next');
-            let currentIndex = 0;
-
-            function updateSlidePosition() {
-                slides.style.transform = translateX(-${currentIndex * 300}px);
-            }
-
-            prevButton.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
-                updateSlidePosition();
-            });
-
-            nextButton.addEventListener('click', () => {
-                currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
-                updateSlidePosition();
-            });
-        });
-        
-    </script>
 
 
     <!-- Featured Destinations -->
