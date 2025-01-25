@@ -3,114 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the legend of Kerala, God's Own Country. Explore adventure tours and breathtaking sights.">
+    <title>Explore_kerala</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style2.css">
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-family: 'Roboto Slab', serif;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .slideshow {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slideshow .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slideshow .card {
+        min-width: 300px;
+        margin-right: 1rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .slideshow .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .slideshow .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+
+    .card-content h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+        color: #4CAF50;
+    }
+
+    .card-content p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .navigation button {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">ETHEREAL ESCAPES</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tours</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">About</a></li>
+            <li class="ctn"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+   
+    <header>
+        <div class="header_content">
+            <h2>Discover the legend of Kerala</h2>
+            <h1>GOD'S OWN COUNTRY</h1>
+            <div class="line"></div>
+            <h3>From serene backwaters to lush tea gardens</h3>
+        </div>
+    </header>
+
+    
+
+
+     <!-- About Section -->
+     <section class="about">
+        <div class="content">
+            <h2>Discover the Wonders of Kerala</h2>
+            <p>
+                Nestled in the southwestern corner of India, Kerala offers a blend of serene landscapes, vibrant traditions, and mouthwatering cuisine. 
+                Immerse yourself in the tranquility of Alleppey's backwaters, stroll through Munnar's picturesque tea plantations, or experience the energy of Kerala's cultural festivals.
+            </p>
+        </div>
+
+    </section>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Places</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 2rem;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            font-family: 'Roboto Slab', serif;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .slideshow {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .slideshow .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slideshow .card {
-            min-width: 300px;
-            margin-right: 1rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .slideshow .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .slideshow .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 1rem;
-        }
-
-        .card-content h3 {
-            margin: 0 0 0.5rem;
-            font-size: 1.5rem;
-            color: #4CAF50;
-        }
-
-        .card-content p {
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .navigation {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .navigation button {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-    </style>
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -547,8 +595,6 @@
             </div>
         </div>
     </div>
-
-
     <script>
         const slides = document.querySelector('.slides');
         const prevButton = document.getElementById('prev');
@@ -569,6 +615,45 @@
             updateSlidePosition();
         });
     </script>
+
+
+    <!-- Featured Destinations -->
+    <section class="destinations">
+        <h2>Top Destinations</h2>
+        <div class="destination-list">
+            <div class="destination">
+                <h3>Alleppey Backwaters</h3>
+                <p>Experience the soothing charm of houseboats and tranquil canals.</p>
+            </div>
+            <div class="destination">
+                <h3>Munnar</h3>
+                <p>Explore rolling hills and sprawling tea gardens in this hill station paradise.</p>
+            </div>
+            <div class="destination">
+                <h3>Kochi</h3>
+                <p>Witness the perfect blend of history, culture, and modernity.</p>
+            </div>
+            <div class="destination">
+                <h3>Wayanad</h3>
+                <p>Dive into adventure with trekking, waterfalls, and wildlife.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Ready to Plan Your Trip?</h2>
+        <p>Let us guide you through the heart of Kerala. Book your journey today!</p>
+        <button class="btn">Get Started</button>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kerala Escapes. All rights reserved. | Designed for Travelers</p>
+    </footer>
 </body>
 </html>
+
+
+
 

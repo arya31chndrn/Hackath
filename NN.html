@@ -119,7 +119,8 @@
     </header>
 
     <div class="container">
-        <div class="slideshow">
+    
+                 <div class="slideshow" id="slideshow-tri">
             <div class="slides">
                 <div class="card">
                     <img src="img/2c129b68121c8e29a58c61e7710871f7.jpg" alt="Kovalam">
@@ -172,20 +173,20 @@
                         <p>Kerala's second-highest peak, ideal for trekking, with lush forests and rich biodiversity.</p>
                     </div>
                 </div>
-                
             </div>
             <div class="navigation">
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
-            </div>
+                <button class="prev" id="prev-tri">&#10094;</button>
+                <button class="next" id="next-tri">&#10095;</button>
+            </div>    
+            
         </div>
-    </div>
+    
     <header>
         <h1>Ernakulam</h1>
     </header>
-
     <div class="container">
-        <div class="slideshow">
+        <div class="slideshow" id="slideshow-kochi">
+            
             <div class="slides">
                 <div class="card">
                     <img src="img/1e02f2c7426487a4924124ae45cd5782.jpg" alt="Hill Palace Museum">
@@ -238,17 +239,18 @@
 
             </div>
             <div class="navigation">
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
+                <button class="prev" id="prev-kochi">&#10094;</button>
+                <button class="next" id="next-kochi">&#10095;</button>
             </div>
         </div>
-    </div>
+    
+    
     <header>
         <h1>Pathanamthitta</h1>
     </header>
-
     <div class="container">
-        <div class="slideshow">
+        <div class="slideshow" id="slideshow-Path">
+            
             <div class="slides">
                 <div class="card">
                     <img src="https://i.pinimg.com/736x/1a/8d/07/1a8d07f0a03a5b62a56af48a0eaf6dd9.jpg" alt="Gavi">
@@ -296,14 +298,13 @@
                         <p>A spiritual site with beautiful surroundings.</p>
                     </div>
                 </div>
-
             </div>
             <div class="navigation">
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
+                <button class="prev" id="prev-Path">&#10094;</button>
+                <button class="next" id="next-Path">&#10095;</button>
             </div>
         </div>
-    </div>
+            
     <header>
         <h1>Thrissur</h1>
     </header>
@@ -550,25 +551,27 @@
 
 
     <script>
-        const slides = document.querySelector('.slides');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        let currentIndex = 0;
+        // Loop through each slideshow and add event listeners for each one
+        document.querySelectorAll('.slideshow').forEach(function(slideshow) {
+            const slides = slideshow.querySelector('.slides');
+            const prevButton = slideshow.querySelector('.prev');
+            const nextButton = slideshow.querySelector('.next');
+            let currentIndex = 0;
 
-        function updateSlidePosition() {
-            slides.style.transform = `translateX(-${currentIndex * 300}px)`;
-        }
+            function updateSlidePosition() {
+                slides.style.transform = `translateX(-${currentIndex * 300}px)`;
+            }
 
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
-            updateSlidePosition();
-        });
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+                updateSlidePosition();
+            });
 
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
-            updateSlidePosition();
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex < slides.children.length - 1) ? currentIndex + 1 : currentIndex;
+                updateSlidePosition();
+            });
         });
     </script>
 </body>
 </html>
-
